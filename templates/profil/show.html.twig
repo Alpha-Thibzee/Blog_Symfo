@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon profil{% endblock %}
+
+{% block body %}
+
+        <h1 class="text-center">Mon Profil</h1>
+
+<div class="card" style="width: 80rem;text-align:center">
+
+        <img class="card-img-top" style="max-width: 12rem; margin:auto" src="{{ asset('assets/image/avatar/' ~ user.avatar)}}" alt="Photo de profil">
+
+        <div class="card-body">
+            <h5 class="card-title">{{user.name}}</h5>
+            <p class="card-text"></p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">{{user.email}}</li>
+            <li class="list-group-item">{{user.bio}}</li>
+        </ul>
+
+        <div class="card-body">
+            <button href="#" class="btn btn-outline-primary">Editer</button>
+            <a href="#" class="btn btn-outline-danger">Supprimer</a>
+        </div>
+
+</div>
+
+{% endblock %}
